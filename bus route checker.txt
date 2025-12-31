@@ -1,0 +1,21 @@
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+@app.route('/find_buses', methods=['POST'])
+def find_buses():
+    data = request.json
+    current_location = data.get("currentLocation")
+    destination = data.get("destination")
+    
+    # Dummy bus data
+    buses = [
+        {"id": 1, "number": "27A", "seatsAvailable": 12},
+        {"id": 2, "number": "34B", "seatsAvailable": 5},
+        {"id": 3, "number": "56C", "seatsAvailable": 20},
+    ]
+    
+    return jsonify(buses)
+
+if __name__ == '__main__':
+    app.run(debug=True)

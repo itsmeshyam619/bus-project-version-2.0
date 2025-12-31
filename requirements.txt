@@ -1,0 +1,22 @@
+Before we implement, you’ll need to install:
+
+
+pip install django-bootstrap4
+pip install djangorestframework
+pip install django-crispy-forms
+
+For live map tracking (Leaflet):
+
+pip install django-leaflet
+
+To track live updates (optional):
+
+pip install channels
+
+Required Package
+Make sure to install requests if Raspberry Pi will send updates using Python:
+
+bash
+Copy
+Edit
+pip install requests
